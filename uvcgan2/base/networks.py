@@ -1,3 +1,8 @@
+# LICENSE
+# This file was extracted from
+#   https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
+# Please see `uvcgan/base/LICENSE` for copyright attribution and LICENSE
+
 # pylint: disable=line-too-long
 # pylint: disable=redefined-builtin
 # pylint: disable=too-many-arguments

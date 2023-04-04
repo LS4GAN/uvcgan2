@@ -1,3 +1,8 @@
+# LICENSE
+# This file was extracted from
+#   https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
+# Please see `uvcgan/base/LICENSE` for copyright attribution and LICENSE
+
 from torch.optim           import lr_scheduler
 from uvcgan2.torch.select import extract_name_kwargs
 
