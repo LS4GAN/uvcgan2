@@ -155,64 +155,6 @@ def parse_deprecated_data_config_v1_imagedir(
         workers    = workers,
     )
 
-def parse_deprecated_data_config_v1_toyzero_precropped(
-    dataset_args, image_shape, workers, transform_train, transform_val
-):
-    align_train = dataset_args.get('align_train', False)
-
-    return DataConfig(
-        datasets = [
-            {
-                'dataset' : {
-                    'name'   : 'toyzero-precropped-v1',
-                    'domain' : domain,
-                    'path'   : dataset_args.get('path', None),
-                },
-                'shape'           : image_shape,
-                'transform_train' : transform_train,
-                'transform_test'  : transform_val,
-            } for domain in [ 'a', 'b' ]
-        ],
-        merge_type = 'paired' if align_train else 'unpaired',
-        workers    = workers,
-    )
-
-def parse_deprecated_data_config_v1_toyzero_presimple(
-    dataset, dataset_args, image_shape, workers, transform_train, transform_val
-):
-    # pylint: disable=too-many-arguments
-    if dataset == 'toyzero-presimple':
-        merge_type = 'paired'
-
-    elif dataset == 'toyzero-preunaligned':
-        if dataset_args.get('align_train', False):
-            merge_type = 'paired'
-        else:
-            merge_type = 'unpaired'
-
-    else:
-        raise ValueError(f"Unsupported dataset '{dataset}'")
-
-    return DataConfig(
-        datasets = [
-            {
-                'dataset' : {
-                    'name'    : 'toyzero-presimple-v1',
-                    'domain'  : domain,
-                    'fname'   : dataset_args.get('fname',   None),
-                    'path'    : dataset_args.get('path',    None),
-                    'seed'    : dataset_args.get('seed',    0),
-                    'shuffle' : dataset_args.get('shuffle', True),
-                },
-                'shape'           : image_shape,
-                'transform_train' : transform_train,
-                'transform_test'  : transform_val,
-            } for domain in [ 'a', 'b' ]
-        ],
-        merge_type = merge_type,
-        workers    = workers,
-    )
-
 def parse_deprecated_data_config_v1(
     dataset, dataset_args, image_shape, workers,
     transform_train = None, transform_val = None
@@ -231,17 +173,6 @@ def parse_deprecated_data_config_v1(
     if dataset == 'imagedir':
         return parse_deprecated_data_config_v1_imagedir(
             dataset_args, image_shape, workers, transform_train, transform_val
-        )
-
-    if dataset == 'toyzero-precropped':
-        return parse_deprecated_data_config_v1_toyzero_precropped(
-            dataset_args, image_shape, workers, transform_train, transform_val
-        )
-
-    if dataset in [ 'toyzero-presimple', 'toyzero-preunaligned' ]:
-        return parse_deprecated_data_config_v1_toyzero_presimple(
-            dataset, dataset_args, image_shape, workers,
-            transform_train, transform_val
         )
 
     raise NotImplementedError(
