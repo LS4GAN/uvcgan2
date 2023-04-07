@@ -16,7 +16,7 @@ def downscale(image, out_shape, interpolation):
     return image.resize(out_shape, resample = resample)
 
 def parse_cmdargs():
-    parser = argparse.ArgumentParser(description = 'Pprint metrics table')
+    parser = argparse.ArgumentParser(description = 'Resize Images with PIL')
 
     parser.add_argument(
         'source',
