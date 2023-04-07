@@ -30,14 +30,23 @@ def prepare_model(model, device):
 
     return model
 
+@torch.no_grad()
 def update_average_model(average_model, model, momentum):
-    # NOTE: Perhaps this func needs to be rewritten w/o state_dicts.
-    #       Currently, it works since Tensor.detach() returns a view
-    #       of the data, instead of a copy.
-    #       In the future, pytorch may modify this behavior.
-    new_state = model.state_dict()
+    # TODO: Maybe it is better to copy buffers, instead of
+    #       averaging them.
+    #       Think about this later.
+    online_params = dict(model.named_parameters())
+    online_bufs   = dict(model.named_buffers())
 
-    with torch.no_grad():
-        for (k, v) in average_model.state_dict().items():
-            v[:] = momentum * v + (1 - momentum) * new_state[k]
+    for (k, v) in average_model.named_parameters():
+        if v.ndim == 0:
+            v.copy_(momentum * v + (1 - momentum) * online_params[k])
+        else:
+            v.lerp_(online_params[k], (1 - momentum))
+
+    for (k, v) in average_model.named_buffers():
+        if v.ndim == 0:
+            v.copy_(momentum * v + (1 - momentum) * online_bufs[k])
+        else:
+            v.lerp_(online_bufs[k], (1 - momentum))
 
