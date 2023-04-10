@@ -261,5 +261,5 @@ attribution.
 [egsde_repo]: https://github.com/ML-GSAI/EGSDE
 [benchmarking_repo]: https://github.com/LS4GAN/benchmarking
 [uvcgan2_paper]: https://arxiv.org/abs/2303.16280
-[pretrained_models]: _placeholder
+[pretrained_models]: https://zenodo.org/record/7813795
 
