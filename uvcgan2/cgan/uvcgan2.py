@@ -174,7 +174,6 @@ class UVCGAN2(ModelBase):
         self.criterion_cycle   = torch.nn.L1Loss()
         self.criterion_idt     = torch.nn.L1Loss()
         self.criterion_consist = torch.nn.L1Loss()
-        self.gradient_penalty  = config.gradient_penalty
 
         if self.is_train:
             self.queues = NamedDict(**{
