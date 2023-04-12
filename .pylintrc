@@ -1,0 +1,21 @@
+[MESSAGES CONTROL]
+
+disable=
+    bad-continuation,
+    bad-whitespace,
+    invalid-name,
+    no-else-return,
+    superfluous-parens,
+    too-few-public-methods,
+    trailing-newlines,
+    duplicate-code,
+    missing-function-docstring,
+    missing-class-docstring,
+    missing-module-docstring,
+    consider-using-f-string,
+
+[TYPECHECK]
+generated-members=
+    torch
+
+
