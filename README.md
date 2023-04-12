@@ -5,12 +5,13 @@ Improving Quality of GANs for Unpaired Image-to-Image Translation`
 [paper][uvcgan2_paper].
 
 `uvcgan2` builds upon the CycleGAN method for unpaired image-to-image transfer
-and imporoves its performance by modifyng the generator, discriminator, and the
+and improves its performance by modifying the generator, discriminator, and the
 training procedure.
 
 This README file provides brief instructions about how to set up the `uvcgan2`
-package and reproduce the paper results. To facilitate the XXXX we share
-the pre-trained models (c.f. SECTION_PRETRAINED).
+package and reproduce the paper results. To further facilitate the
+reproducibility we share the pre-trained models
+(c.f. section Pre-trained models)
 
 The code of `uvcgan2` is based on [pytorch-CycleGAN-and-pix2pix][cyclegan_repo]
 and [uvcgan][uvcgan_repo]. Please refer to the LICENSE section for the proper
@@ -247,7 +248,7 @@ whose IDs are in the `CUDA_VISIBLE_DEVICES`.
 
 `uvcgan2` is distributed under `BSD-2` license.
 
-`uvcgan2` repository contains some code (primarity in `uvcgan/base`
+`uvcgan2` repository contains some code (primarily in `uvcgan/base`
 subdirectory) from [pytorch-CycleGAN-and-pix2pix][cyclegan_repo].
 This code is also licensed under `BSD-2` license (please refer to
 `uvcgan2/base/LICENSE` for details).
