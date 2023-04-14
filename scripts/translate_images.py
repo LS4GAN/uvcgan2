@@ -49,8 +49,9 @@ def dump_single_domain_images(
 ):
     # pylint: disable=too-many-arguments
     data_it, steps = slice_data_loader(data_it, batch_size, n_eval)
+    desc = f'Translating domain {domain}'
 
-    for batch in tqdm.tqdm(data_it, desc = f'Dumping {domain}', total = steps):
+    for batch in tqdm.tqdm(data_it, desc = desc, total = steps):
         model.set_input(batch, domain = domain)
         model.forward_nograd()
 
