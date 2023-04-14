@@ -63,6 +63,13 @@ We provide pre-trained generators that were used to obtain the `Rethinking
 CycleGAN` [paper][uvcgan2_paper] results.
 They can be found on [Zenodo][pretrained_models].
 
+`uvcgan2` supplies a script `./scripts/download_model.sh` to download
+the pre-trained models, e.g.
+
+```bash
+./scripts/download_model.sh afhq_cat2dog
+```
+
 
 ## 1. Download Datasets
 
@@ -189,13 +196,14 @@ to calculate KID/FID metrics of the translated images.
 A helper script `scripts/eval_fid.py` is provided to facilitate such
 a calculation. It can be run with
 ```bash
-python3 eval_fid.py `PATH_TO_TRAINED_MODEL/evals/final/images_eval-SPLIT` --kid-size KID_SIZE
+python3 scripts/eval_fid.py `PATH_TO_TRAINED_MODEL/evals/final/images_eval-SPLIT` --kid-size KID_SIZE
 ```
 
 where `KID_SIZE` is the parameter of the KID calculation algorithm. Its value
 depends on the dataset and should be set to match the `Rethinking CycleGAN`
-paper. At the end of the calculation, the scores will be saved in the following
-file:
+paper (c.f. Section 5.2 and Appendix E).
+
+At the end of the calculation, the scores will be saved in the following file:
 ```
 PATH_TO_TRAINED_MODEL/evals/final/images_eval-SPLIT/fid_metrics.csv
 ```
@@ -248,7 +256,7 @@ whose IDs are in the `CUDA_VISIBLE_DEVICES`.
 
 `uvcgan2` is distributed under `BSD-2` license.
 
-`uvcgan2` repository contains some code (primarily in `uvcgan/base`
+`uvcgan2` repository contains some code (primarily in `uvcgan2/base`
 subdirectory) from [pytorch-CycleGAN-and-pix2pix][cyclegan_repo].
 This code is also licensed under `BSD-2` license (please refer to
 `uvcgan2/base/LICENSE` for details).
@@ -262,5 +270,5 @@ attribution.
 [egsde_repo]: https://github.com/ML-GSAI/EGSDE
 [benchmarking_repo]: https://github.com/LS4GAN/benchmarking
 [uvcgan2_paper]: https://arxiv.org/abs/2303.16280
-[pretrained_models]: https://zenodo.org/record/7813795
+[pretrained_models]: https://zenodo.org/record/7826901
 
