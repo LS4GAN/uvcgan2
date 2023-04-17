@@ -69,7 +69,7 @@ the pre-trained models, e.g.
 ```bash
 ./scripts/download_model.sh afhq_cat2dog
 ```
-
+The downloaded models will be unpacked under the `${UVCGAN_OUTDIR}` with the default path as `./outdir`.
 
 ## 1. Download Datasets
 
@@ -132,7 +132,7 @@ More details can be found by looking over the scripts. Each of them contains
 a training configuration, which should be self-explanatory.
 
 When the training is finished, the pre-trained generators will be saved under
-the "${UVCGAN2_OUTDIR}" directory.
+the `${UVCGAN2_OUTDIR}` directory.
 
 
 ## 4. Image-to-Image Translation Training
