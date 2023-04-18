@@ -234,12 +234,28 @@ The indices correspond to the lexicographically sorted original names.
 Before providing the translated images to the `run_score.py` script, they
 should be renamed back to the original names.
 
-
 #### 5.2.3 Consistent Evaluation of the Quality of Translation
 
 Finally, `uvcgan2` provides a script `scripts/eval_il2_scores.py` to batch
 evaluate faithfulness scores based on the Inception-v3 L2 distances. Its
 invocation is similar to the `scripts/eval_fid.py` from the section 5.2.1.
+
+
+## 6 Sample Translations
+### 6.1 Selfie2Anime and Anime2Selfie ([pdf](./figures/github_grid_LQ_anime.pdf))
+<p align="center">
+  <img src="./figures/github_grid_LQ_anime.png" width="95%" title="Selfie2Anime and Anime2Selfie">
+</p>
+
+### 6.2 Gender Swap on the CelebA dataset ([pdf](./figures/github_grid_LQ_gender.pdf))
+<p align="center">
+  <img src="./figures/github_grid_LQ_gender.png" width="95%" title="Male2Female and Female2Glasses">
+</p>
+
+### 6.3 Removing and Adding Glasses on the CelebA dataset ([pdf](./figures/github_grid_LQ_glasses.pdf))
+<p align="center">
+  <img src="./figures/github_grid_LQ_glasses.png" width="95%" title="Removing Glasses and Adding Glasses">
+</p>
 
 
 # F.A.Q.
