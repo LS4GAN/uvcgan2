@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./figures/wild2cat_1.png" width="30%" title="Wild2Cat_1">
+</p>
+
 # Overview
 
 This package provides reference implementation of the `Rethinking CycleGAN:
