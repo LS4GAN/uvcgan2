@@ -242,19 +242,39 @@ invocation is similar to the `scripts/eval_fid.py` from the section 5.2.1.
 
 
 ## 6 Sample Translations
-### 6.1 Selfie2Anime and Anime2Selfie ([pdf](./figures/github_grid_LQ_anime.pdf))
+### Selfie2Anime and Anime2Selfie ([pdf](./figures/github_grid_LQ_anime.pdf))
 <p align="center">
   <img src="./figures/github_grid_LQ_anime.png" width="95%" title="Selfie2Anime and Anime2Selfie">
 </p>
 
-### 6.2 Gender Swap on the CelebA dataset ([pdf](./figures/github_grid_LQ_gender.pdf))
+### Gender Swap on the CelebA dataset ([pdf](./figures/github_grid_LQ_gender.pdf))
 <p align="center">
   <img src="./figures/github_grid_LQ_gender.png" width="95%" title="Male2Female and Female2Glasses">
 </p>
 
-### 6.3 Removing and Adding Glasses on the CelebA dataset ([pdf](./figures/github_grid_LQ_glasses.pdf))
+### Removing and Adding Glasses on the CelebA dataset ([pdf](./figures/github_grid_LQ_glasses.pdf))
 <p align="center">
   <img src="./figures/github_grid_LQ_glasses.png" width="95%" title="Removing Glasses and Adding Glasses">
+</p>
+
+### Cat2Dog on the AFHQ dataset ([pdf](./figures/github_grid_HQ_cat2dog.pdf))
+<p align="center">
+  <img src="./figures/github_grid_HQ_cat2dog.png" width="95%" title="Cat2Dog">
+</p>
+
+### Wild2Dog on the AFHQ dataset ([pdf](./figures/github_grid_HQ_wild2dog.pdf))
+<p align="center">
+  <img src="./figures/github_grid_HQ_wild2dog.png" width="95%" title="Wild2Dog">
+</p>
+
+### Wild2Cat on the AFHQ dataset ([pdf](./figures/github_grid_HQ_wild2cat.pdf))
+<p align="center">
+  <img src="./figures/github_grid_HQ_wild2cat.png" width="95%" title="Wild2Cat">
+</p>
+
+### Male2Female on the CelebA-HQ dataset ([pdf](./figures/github_grid_HQ_male2female.pdf))
+<p align="center">
+  <img src="./figures/github_grid_HQ_male2female.png" width="95%" title="Male2Female">
 </p>
 
 
