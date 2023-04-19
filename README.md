@@ -1,6 +1,23 @@
+# Rethinking CycleGAN: Improving Quality of GANs for Unpaired Image-to-Image Translation
 <p align="center">
-  <img src="./figures/wild2cat_1.png" width="30%" title="Wild2Cat_1">
+  <img src="./figures/movie_male2female_0.png" width="24%" title="./figures/movie_male2female_0.png">
+  <img src="./figures/movie_male2female_3.png" width="24%" title="./figures/movie_male2female_3.png">
+  <img src="./figures/movie_male2female_14.png" width="24%" title="./figures/movie_male2female_14.png">
+  <img src="./figures/movie_male2female_17.png" width="24%" title="./figures/movie_male2female_17.png">
 </p>
+<p align="center">
+  <img src="./figures/movie_wild2cat_0.png" width="24%" title="./figures/movie_wild2cat_0.png">
+  <img src="./figures/movie_wild2cat_5.png" width="24%" title="./figures/movie_wild2cat_5.png">
+  <img src="./figures/movie_wild2cat_6.png" width="24%" title="./figures/movie_wild2cat_6.png">
+  <img src="./figures/movie_wild2cat_15.png" width="24%" title="./figures/movie_wild2cat_15.png">
+</p>
+<p align="center">
+  <img src="./figures/movie_cat2dog_0.png" width="24%" title="./figures/movie_cat2dog_0.png">
+  <img src="./figures/movie_cat2dog_7.png" width="24%" title="./figures/movie_cat2dog_7.png">
+  <img src="./figures/movie_cat2dog_14.png" width="24%" title="./figures/movie_cat2dog_14.png">
+  <img src="./figures/movie_cat2dog_16.png" width="24%" title="./figures/movie_cat2dog_16.png">
+</p>
+
 
 # Overview
 
