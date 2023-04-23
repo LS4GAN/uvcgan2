@@ -263,9 +263,9 @@ invocation is similar to the `scripts/eval_fid.py` from the section 5.2.1.
 
 
 ## 6 Sample Translations
-### Selfie2Anime and Anime2Selfie ([pdf](./figures/github_grid_LQ_anime.pdf))
+### Selfie2Anime and Anime2Selfie ([pdf](https://github.com/LS4GAN/gallary/blob/main/uvcgan2/grids/github_grid_LQ_anime.pdf))
 <p align="center">
-  <img src="./figures/github_grid_LQ_anime.png" width="95%" title="Selfie2Anime and Anime2Selfie">
+  <img src="https://github.com/LS4GAN/gallary/blob/main/uvcgan2/grids/github_grid_LQ_anime.png" width="95%" title="Selfie2Anime and Anime2Selfie">
 </p>
 
 ### Gender Swap on the CelebA dataset ([pdf](./figures/github_grid_LQ_gender.pdf))
