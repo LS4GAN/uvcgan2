@@ -280,22 +280,22 @@ invocation is similar to the `scripts/eval_fid.py` from the section 5.2.1.
 
 ### Cat2Dog on the AFHQ dataset ([pdf][grid_pdf_HQ_cat2dog])
 <p align="center">
-  <img src="./figures/github_grid_HQ_cat2dog.png" width="95%" title="AFHQ_Cat2Dog">
+  <img src="https://github.com/LS4GAN/gallary/blob/main/uvcgan2/grids/github_grid_HQ_cat2dog.png" width="95%" title="AFHQ_Cat2Dog">
 </p>
 
 ### Wild2Dog on the AFHQ dataset ([pdf][grid_pdf_HQ_wild2dog])
 <p align="center">
-  <img src="./figures/github_grid_HQ_wild2dog.png" width="95%" title="AFHQ_Wild2Dog">
+  <img src="https://github.com/LS4GAN/gallary/blob/main/uvcgan2/grids/github_grid_HQ_wild2dog.png" width="95%" title="AFHQ_Wild2Dog">
 </p>
 
 ### Wild2Cat on the AFHQ dataset ([pdf][grid_pdf_HQ_wild2cat])
 <p align="center">
-  <img src="./figures/github_grid_HQ_wild2cat.png" width="95%" title="AFHQ_Wild2Cat">
+  <img src="https://github.com/LS4GAN/gallary/blob/main/uvcgan2/grids/github_grid_HQ_wild2cat.png" width="95%" title="AFHQ_Wild2Cat">
 </p>
 
 ### Male2Female on the CelebA-HQ dataset ([pdf][grid_pdf_HQ_male2female])
 <p align="center">
-  <img src="./figures/github_grid_HQ_male2female.png" width="95%" title="CelebA-HQ_Male2Female">
+  <img src="https://github.com/LS4GAN/gallary/blob/main/uvcgan2/grids/github_grid_HQ_male2female.png" width="95%" title="CelebA-HQ_Male2Female">
 </p>
 
 
