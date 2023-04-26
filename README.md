@@ -1,3 +1,17 @@
+# Rethinking CycleGAN: Improving Quality of GANs for Unpaired Image-to-Image Translation
+
+Dot on left input; dot on right: translation.
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/male2female_v2.webp" width="95%" title="male to female translation with CelebA-HQ">
+</p>
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/wild2cat_v2.webp" width="95%" title="wild to cat translation with AFHQ">
+</p>
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/cat2dog_v2.webp" width="95%" title="cat to dog translation with AFHQ">
+</p>
+
+
 # Overview
 
 This package provides reference implementation of the `Rethinking CycleGAN:
@@ -234,12 +248,48 @@ The indices correspond to the lexicographically sorted original names.
 Before providing the translated images to the `run_score.py` script, they
 should be renamed back to the original names.
 
-
 #### 5.2.3 Consistent Evaluation of the Quality of Translation
 
 Finally, `uvcgan2` provides a script `scripts/eval_il2_scores.py` to batch
 evaluate faithfulness scores based on the Inception-v3 L2 distances. Its
 invocation is similar to the `scripts/eval_fid.py` from the section 5.2.1.
+
+
+## 6 Sample Translations
+### Selfie2Anime and Anime2Selfie ([pdf][grid_pdf_LQ_anime])
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_anime.png.jpg" width="95%" title="Selfie2Anime and Anime2Selfie">
+</p>
+
+### Gender Swap on the CelebA dataset ([pdf][grid_pdf_LQ_gender])
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_gender.png.jpg" width="95%" title="Male2Female and Female2Glasses">
+</p>
+
+### Removing and Adding Glasses on the CelebA dataset ([pdf][grid_pdf_LQ_glasses])
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_glasses.png.jpg" width="95%" title="Removing Glasses and Adding Glasses">
+</p>
+
+### Cat2Dog on the AFHQ dataset ([pdf][grid_pdf_HQ_cat2dog])
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_cat2dog.png.jpg" width="95%" title="AFHQ_Cat2Dog">
+</p>
+
+### Wild2Dog on the AFHQ dataset ([pdf][grid_pdf_HQ_wild2dog])
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2dog.png.jpg" width="95%" title="AFHQ_Wild2Dog">
+</p>
+
+### Wild2Cat on the AFHQ dataset ([pdf][grid_pdf_HQ_wild2cat])
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2cat.png.jpg" width="95%" title="AFHQ_Wild2Cat">
+</p>
+
+### Male2Female on the CelebA-HQ dataset ([pdf][grid_pdf_HQ_male2female])
+<p align="center">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_male2female.png.jpg" width="95%" title="CelebA-HQ_Male2Female">
+</p>
 
 
 # F.A.Q.
@@ -271,4 +321,10 @@ attribution.
 [benchmarking_repo]: https://github.com/LS4GAN/benchmarking
 [uvcgan2_paper]: https://arxiv.org/abs/2303.16280
 [pretrained_models]: https://zenodo.org/record/7826901
-
+[grid_pdf_LQ_anime]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_anime.pdf
+[grid_pdf_LQ_gender]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_gender.pdf
+[grid_pdf_LQ_glasses]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_glasses.pdf
+[grid_pdf_HQ_cat2dog]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_cat2dog.pdf
+[grid_pdf_HQ_wild2dog]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2dog.pdf
+[grid_pdf_HQ_wild2cat]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2cat.pdf
+[grid_pdf_HQ_male2female]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_male2female.pdf
