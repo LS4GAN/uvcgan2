@@ -256,37 +256,37 @@ invocation is similar to the `scripts/eval_fid.py` from the section 5.2.1.
 ## 6 Sample Translations
 ### Selfie2Anime and Anime2Selfie ([pdf][grid_pdf_LQ_anime])
 <p align="center">
-  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_anime.png" width="95%" title="Selfie2Anime and Anime2Selfie">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_anime.png.jpg" width="95%" title="Selfie2Anime and Anime2Selfie">
 </p>
 
 ### Gender Swap on the CelebA dataset ([pdf][grid_pdf_LQ_gender])
 <p align="center">
-  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_gender.png" width="95%" title="Male2Female and Female2Glasses">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_gender.png.jpg" width="95%" title="Male2Female and Female2Glasses">
 </p>
 
 ### Removing and Adding Glasses on the CelebA dataset ([pdf][grid_pdf_LQ_glasses])
 <p align="center">
-  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_glasses.png" width="95%" title="Removing Glasses and Adding Glasses">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_LQ_glasses.png.jpg" width="95%" title="Removing Glasses and Adding Glasses">
 </p>
 
 ### Cat2Dog on the AFHQ dataset ([pdf][grid_pdf_HQ_cat2dog])
 <p align="center">
-  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_cat2dog.png" width="95%" title="AFHQ_Cat2Dog">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_cat2dog.png.jpg" width="95%" title="AFHQ_Cat2Dog">
 </p>
 
 ### Wild2Dog on the AFHQ dataset ([pdf][grid_pdf_HQ_wild2dog])
 <p align="center">
-  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2dog.png" width="95%" title="AFHQ_Wild2Dog">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2dog.png.jpg" width="95%" title="AFHQ_Wild2Dog">
 </p>
 
 ### Wild2Cat on the AFHQ dataset ([pdf][grid_pdf_HQ_wild2cat])
 <p align="center">
-  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2cat.png" width="95%" title="AFHQ_Wild2Cat">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2cat.png.jpg" width="95%" title="AFHQ_Wild2Cat">
 </p>
 
 ### Male2Female on the CelebA-HQ dataset ([pdf][grid_pdf_HQ_male2female])
 <p align="center">
-  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_male2female.png" width="95%" title="CelebA-HQ_Male2Female">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_male2female.png.jpg" width="95%" title="CelebA-HQ_Male2Female">
 </p>
 
 
