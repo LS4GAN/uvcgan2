@@ -1,4 +1,6 @@
 # Rethinking CycleGAN: Improving Quality of GANs for Unpaired Image-to-Image Translation
+
+Dot on left input; dot on right: translation.
 <p align="center">
   <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/male2female_v2.webp" width="95%" title="male to female translation with CelebA-HQ">
 </p>
