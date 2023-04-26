@@ -1,21 +1,12 @@
 # Rethinking CycleGAN: Improving Quality of GANs for Unpaired Image-to-Image Translation
 <p align="center">
-  <img src="./figures/movie_male2female_0.png" width="24%" title="./figures/movie_male2female_0.png">
-  <img src="./figures/movie_male2female_3.png" width="24%" title="./figures/movie_male2female_3.png">
-  <img src="./figures/movie_male2female_14.png" width="24%" title="./figures/movie_male2female_14.png">
-  <img src="./figures/movie_male2female_17.png" width="24%" title="./figures/movie_male2female_17.png">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/male2female_v2.webp" width="95%" title="male to female translation with CelebA-HQ">
 </p>
 <p align="center">
-  <img src="./figures/movie_wild2cat_0.png" width="24%" title="./figures/movie_wild2cat_0.png">
-  <img src="./figures/movie_wild2cat_5.png" width="24%" title="./figures/movie_wild2cat_5.png">
-  <img src="./figures/movie_wild2cat_6.png" width="24%" title="./figures/movie_wild2cat_6.png">
-  <img src="./figures/movie_wild2cat_15.png" width="24%" title="./figures/movie_wild2cat_15.png">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/wild2cat_v2.webp" width="95%" title="wild to cat translation with AFHQ">
 </p>
 <p align="center">
-  <img src="./figures/movie_cat2dog_0.png" width="24%" title="./figures/movie_cat2dog_0.png">
-  <img src="./figures/movie_cat2dog_7.png" width="24%" title="./figures/movie_cat2dog_7.png">
-  <img src="./figures/movie_cat2dog_14.png" width="24%" title="./figures/movie_cat2dog_14.png">
-  <img src="./figures/movie_cat2dog_16.png" width="24%" title="./figures/movie_cat2dog_16.png">
+  <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/cat2dog_v2.webp" width="95%" title="cat to dog translation with AFHQ">
 </p>
 
 
