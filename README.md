@@ -283,7 +283,7 @@ additional details on how the consistent evaluation protocol was applied
 to the earlier GAN-based models.
 
 
-#### 5.2.2 Consistent Evaluation of the Quality of Translation
+#### 5.2.2 Ad-Hoc Evaluations of the Quality of Translation
 
 An alternative way to evaluate `uvcgan2` models is to rely on various
 ad-hoc protocols found in the wild. In the paper, we have used two such
@@ -304,7 +304,7 @@ The indices correspond to the lexicographically sorted original names.
 Before providing the translated images to the `run_score.py` script, they
 should be renamed back to the original names.
 
-#### 5.2.3 Consistent Evaluation of the Quality of Translation
+#### 5.2.3 Evaluation of the Translation Faithfulness
 
 Finally, `uvcgan2` provides a script `scripts/eval_il2_scores.py` to batch
 evaluate faithfulness scores based on the Inception-v3 L2 distances. Its
