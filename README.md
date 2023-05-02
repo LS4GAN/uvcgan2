@@ -32,6 +32,51 @@ The code of `uvcgan2` is based on [pytorch-CycleGAN-and-pix2pix][cyclegan_repo]
 and [uvcgan][uvcgan_repo]. Please refer to the LICENSE section for the proper
 copyright attribution.
 
+## Applying UVCGANv2 to Your Dataset
+
+This README file mainly describes the reproduction of the `Rethinking CycleGAN`
+[paper][uvcgan2_paper] results. If you would like to apply the `uvcgan2` to
+some other dataset, please check out our accompanying repository
+[uvcgan4slats][uvcgan4slats]. It describes an application of `uvcgan` to a
+generic scientific dataset.
+
+In short, the procedure to adapt the `uvcgan2` to your problem is as follows:
+
+1. Arrange your dataset to the format, similar to CelebA-HQ and AFHQ.
+   For reference, the format of the CelebA-HQ directory is:
+
+```bash
+    CelebA-HQ/          # Name of the dataset
+        train/
+            male/       # Name of the first domain
+            female/     # Name of the second domain
+        val/
+            male/
+            female/
+```
+
+   where the directories named `male/` and `female/` store the corresponding
+   images. Arrange your dataset into a similar form, but choose appropriate
+   names for the dataset directory and data domains.
+
+2. Next, take an existing training script as a starting point.
+   For instance, this one should work
+```
+scripts/celeba_hq/train_m2f_translation.py
+```
+
+   The script contains a training configuration in the `args_dict`
+   dictionary. The dictionary format should be rather self-explanatory.
+   Modify the following parameters of the `args_dict`:
+
+   - Modify `data` configuration to match your dataset.
+   - Modify `outdir` parameter and set it to the path, where you want the
+     output to be saved.
+   - Modify `transfer` parameter and set it to `None`. Alternatively, check our
+     [uvcgan4slats][uvcgan4slats] repository, if you want to pretrain the
+     generators on a pretext task.
+
+3. Use the instructions below to perform the model evaluation.
 
 # Installation & Requirements
 
@@ -329,3 +374,4 @@ attribution.
 [grid_pdf_HQ_wild2dog]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2dog.pdf
 [grid_pdf_HQ_wild2cat]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_wild2cat.pdf
 [grid_pdf_HQ_male2female]: https://github.com/LS4GAN/gallery/blob/main/uvcgan2/grids/github_grid_HQ_male2female.pdf
+[uvcgan4slats]: https://github.com/LS4GAN/uvcgan4slats
