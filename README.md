@@ -1,6 +1,5 @@
 # Rethinking CycleGAN: Improving Quality of GANs for Unpaired Image-to-Image Translation
 
-Dot on left input; dot on right: translation.
 <p align="center">
   <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/male2female_v2.webp" width="95%" title="male to female translation with CelebA-HQ">
 </p>
@@ -11,6 +10,8 @@ Dot on left input; dot on right: translation.
   <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/cat2dog_v2.webp" width="95%" title="cat to dog translation with AFHQ">
 </p>
 
+_Samples of Male to Female (Celeba-HQ), Wildlife to Cat (AFHQ), and Cat to Dog
+(AFHQ) translations obtained with UVCGANv2_
 
 # Overview
 
