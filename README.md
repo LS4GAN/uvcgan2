@@ -99,13 +99,18 @@ from the `uvcgan2` source tree.
 
 ## Environment Setup
 
-`uvcgan2` extensively uses two environment variables `UVCGAN2_DATA` and
-`UVCGAN2_OUTDIR` to locate user data and output directories. Users are advised
-to set these environment variables. `uvcgan2` will look for datasets in the
-`${UVCGAN2_DATA}` directory and will save results under the `${UVCGAN2_OUTDIR}`
-directory. If these variables are not set then they will default to `./data`
-and `./outdir` correspondingly.
+By default, `uvcgan2` will try to read datasets from the `./data` directory
+and will save trained models under the `./outdir` directory. If you would
+like to change this default behavior, set the two environment variables
+`UVCGAN2_DATA` and `UVCGAN2_OUTDIR` to the desired paths.
 
+For instance, on UNIX-like system (Linux, MacOS) these variables can be
+set with:
+
+```bash
+export UVCGAN2_DATA=PATH_WHERE_DATA_IS_SAVED
+export UVCGAN2_OUTDIR=PATH_TO_SAVE_MODELS_TO
+```
 
 # UVCGANv2 Reproduction
 
