@@ -64,7 +64,8 @@ download_archive ()
 
     if [[ ! -e "${DATADIR}/${archive}" ]]
     then
-        exec_or_die wget "${url}" --output-document "${path}"
+        exec_or_die wget --no-check-certificate \
+            "${url}" --output-document "${path}"
     fi
 
     if [[ -n "${checksum}" ]]
