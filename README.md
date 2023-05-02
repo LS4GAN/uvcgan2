@@ -89,6 +89,11 @@ environment can be constructed with `conda`
 conda env create -f contrib/conda_env.yaml
 ```
 
+The created conda environment can be activated with
+```bash
+conda activate uvcgan2
+```
+
 ## Installation
 
 To install the `uvcgan2` package one can simply run the following command
