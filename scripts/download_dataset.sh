@@ -4,16 +4,16 @@ DATADIR="${UVCGAN2_DATA:-data}"
 
 declare -A URL_LIST=(
     [selfie2anime]="https://www.dropbox.com/s/9lz6gwwwyyxpdnn/selfie2anime.zip"
-    [male2female]="https://cgm.technion.ac.il/Computer-Graphics-Multimedia/CouncilGAN/DataSet/celeba_male2female.zip"
-    [glasses]="https://cgm.technion.ac.il/Computer-Graphics-Multimedia/CouncilGAN/DataSet/celeba_glasses.zip"
+#    [male2female]="https://cgm.technion.ac.il/Computer-Graphics-Multimedia/CouncilGAN/DataSet/celeba_male2female.zip"
+#    [glasses]="https://cgm.technion.ac.il/Computer-Graphics-Multimedia/CouncilGAN/DataSet/celeba_glasses.zip"
     [celeba_hq]="https://www.dropbox.com/s/f7pvjij2xlpff59/celeba_hq.zip"
     [afhq]="https://www.dropbox.com/s/t9l9o3vsx2jai3z/afhq.zip"
 )
 
 declare -A CHECKSUMS=(
     [selfie2anime]="2e8fe7563088971696d29af9f5153772733ac879c155c709b1aad741735ad7bc"
-    [male2female]="97178617b01af691b68f0b97de142c6be3331803b79906666fc9ab76f454a18e"
-    [glasses]="f4f141469fb8955822042d0999adcc81ec40db875c9bc930b733915b2089613f"
+#    [male2female]="97178617b01af691b68f0b97de142c6be3331803b79906666fc9ab76f454a18e"
+#    [glasses]="f4f141469fb8955822042d0999adcc81ec40db875c9bc930b733915b2089613f"
     [celeba_hq]="f56b0d8c505aa01ec4792f8ee2fc2ca128e2cc669277438c0b27d5d69b7e4514"
     [afhq]="7f63dcc14ef58c0e849b59091287e1844da97016073aac20403ae6c6132b950f"
 )
@@ -39,6 +39,26 @@ EOF
     else
         exit 0
     fi
+}
+
+celeba_banner ()
+{
+    local dest="${1}"
+
+    cat <<EOF
+[NOTE] As of June 2023, the download links to the reference CouncilGAN's
+CelebA datasets are no longer working. To use the CelebA datasets for the I2I
+translation, one needs to recreate them.
+
+Please refer to https://github.com/LS4GAN/celeba4cyclegan for instructions
+on how to do that.
+
+Once the dataset is recreated, save it as
+
+'${dest}'
+
+to make it visible to 'uvcgan2'.
+EOF
 }
 
 exec_or_die ()
@@ -137,80 +157,43 @@ download_anime2selfie ()
 
 download_male2female ()
 {
-    local url="${URL_LIST["male2female"]}"
-    local zip="male2female.zip"
     local path="${DATADIR}/celeba_male2female"
-
-    check_dset_exists "${path}"
-    download_and_extract_zip "${url}" "${zip}" "${CHECKSUMS[male2female]}"
-}
-
-move_files ()
-{
-    local dst="${1}"
-    shift
-    local src=( "${@}" )
-
-    # NOTE: too many mv calls. Maybe optimize with xargs
-    exec_or_die find "${src[@]}" -type f -exec mv '{}' "${dst}/" \;
+    celeba_banner "${path}"
 }
 
 download_glasses ()
 {
-    local url="${URL_LIST["glasses"]}"
-    local zip="glasses.zip"
     local path="${DATADIR}/celeba_glasses"
-
-    check_dset_exists "${path}"
-    download_and_extract_zip "${url}" "${zip}" "${CHECKSUMS[glasses]}"
-
-    local dset_dir="${DATADIR}/glasses"
-
-    for subdir in {trainA,trainB,testA,testB}
-    do
-        echo "Restructuring directory: '${subdir}'"
-        for splitdir in {1,2}
-        do
-            # shellcheck disable=SC2178
-            local src="${dset_dir}/${subdir}/${splitdir}"
-            local dst="${dset_dir}/${subdir}/"
-
-            # shellcheck disable=SC2128
-            move_files "${dst}" "${src}"
-
-            # shellcheck disable=SC2128
-            exec_or_die rmdir "${src}"
-        done
-    done
-
-    exec_or_die mv "${dset_dir}" "${path}"
-    echo " - Dataset is moved to '${path}'"
+    celeba_banner "${path}"
 }
 
 download_celeba_all ()
 {
     # NOTE: This dset is simply restructured male2female
-    local url="${URL_LIST["male2female"]}"
-    local zip="male2female.zip"
     local path="${DATADIR}/celeba_all"
+    local path_m2f="${DATADIR}/celeba_male2female"
 
+    cat <<EOF
+'celeba_all' is constructed from the 'celeba_male2female' dataset.
+
+Please make sure that the 'celeba_male2female' is available by running
+$ scripts/download_dataset.sh male2female
+
+EOF
     check_dset_exists "${path}"
-    download_archive "${url}" "${zip}" "${CHECKSUMS[male2female]}"
 
-    exec_or_die unzip "${DATADIR}/${zip}" -d "${path}"
-
-    local unzipped_path="${path}/celeba_male2female"
+    [[ -e "${path_m2f}" ]] \
+        || die "'celeba_male2female' is not found under '${path_m2f}'"
 
     exec_or_die mkdir -p "${path}/train" "${path}/val"
 
-    exec_or_die mv "${unzipped_path}/trainA" "${unzipped_path}/trainB" \
+    echo "Copying files..."
+
+    exec_or_die cp -r "${path_m2f}/trainA" "${path_m2f}/trainB" \
         "${path}/train/"
 
-    exec_or_die mv "${unzipped_path}/testA" "${unzipped_path}/testB" \
+    exec_or_die cp -r "${path_m2f}/testA" "${path_m2f}/testB" \
         "${path}/val"
-
-    exec_or_die rmdir "${unzipped_path}"
-    echo " - Dataset is moved to '${path}'"
 }
 
 display_hq_resize_warning ()
