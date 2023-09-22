@@ -1,4 +1,4 @@
-# Rethinking CycleGAN: Improving Quality of GANs for Unpaired Image-to-Image Translation
+# UVCGAN v2: An Improved Cycle-Consistent GAN for Unpaired Image-to-Image Translation
 
 <p align="center">
   <img src="https://github.com/LS4GAN/gallery/blob/main/uvcgan2/animations/male2female_v2.webp" width="95%" title="male to female translation with CelebA-HQ">
@@ -13,10 +13,8 @@
 _Samples of Male to Female (Celeba-HQ), Wildlife to Cat (AFHQ), and Cat to Dog
 (AFHQ) translations obtained with UVCGANv2_
 
-# Overview
-
-This package provides reference implementation of the `Rethinking CycleGAN:
-Improving Quality of GANs for Unpaired Image-to-Image Translation`
+This package provides reference implementation of the `UVCGAN v2: An Improved
+Cycle-Consistent GAN for Unpaired Image-to-Image Translation`
 [paper][uvcgan2_paper].
 
 `uvcgan2` builds upon the CycleGAN method for unpaired image-to-image transfer
@@ -31,6 +29,12 @@ reproducibility we share the pre-trained models
 The code of `uvcgan2` is based on [pytorch-CycleGAN-and-pix2pix][cyclegan_repo]
 and [uvcgan][uvcgan_repo]. Please refer to the LICENSE section for the proper
 copyright attribution.
+
+UPDATE (2023-09-22):
+Changed the arxiv preprint title:
+- from: ~"Rethinking CycleGAN: Improving Quality of GANs for Unpaired Image-to-Image Translation"~
+- to: "UVCGAN v2: An Improved Cycle-Consistent GAN for Unpaired Image-to-Image Translation Overview"
+
 
 ## Applying UVCGANv2 to Your Dataset
 
