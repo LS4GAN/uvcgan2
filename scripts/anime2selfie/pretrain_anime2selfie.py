@@ -22,7 +22,7 @@ args_dict = {
                 'dataset' : {
                     'name'   : 'cyclegan',
                     'domain' : domain,
-                    'path'   : 'anime2selfie',
+                    'path'   : 'selfie2anime',
                 },
                 'shape'           : (3, 256, 256),
                 'transform_train' : [
