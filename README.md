@@ -367,6 +367,37 @@ of comma-separated GPU indices. When it is set, `pytorch` will only use GPUs
 whose IDs are in the `CUDA_VISIBLE_DEVICES`.
 
 
+## What is the structure of a model directory?
+
+`uvcgan` saves each model in a separate directory that contains:
+ - `MODEL/config.json` -- model architecture, training, and evaluation
+    configurations
+ - `MODEL/net_*.pth`  -- PyTorch weights of model networks
+ - `MODEL/opt_*.pth`  -- PyTorch weights of training optimizers
+ - `MODEL/shed_*.pth` -- PyTorch weights of training schedulers
+ - `MODEL/checkpoints/` -- training checkpoints
+ - `MODEL/evals/`     -- evaluation results
+
+
+## Training fails with "Config collision detected" error
+
+`uvcgan` enforces a one-model-per-directory policy to prevent accidental
+overwrites of existing models. Each model directory must have a unique
+configuration - if you try to place a model with different settings in a
+directory that already contains a model, you'll receive a "Config collision
+detected" error.
+
+This safeguard helps prevent situations where you might accidentally lose
+trained models by starting a new training run with different parameters in the
+same directory.
+
+Solutions:
+1. To overwrite the old model: delete the old `config.json` configuration file
+   and restart the training process.
+2. To preserve the old model: modify the training script of the new model and
+   update the `label` or `outdir` configuration options to avoid collisions.
+
+
 # LICENSE
 
 `uvcgan2` is distributed under `BSD-2` license.
