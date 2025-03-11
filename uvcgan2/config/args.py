@@ -59,10 +59,15 @@ class Args:
             diff = get_config_difference(old_config, self.config)
 
             raise RuntimeError(
-                (
-                    f"Config collision detected in '{self.savedir}'"
-                    f" . Difference:\n{diff}"
-                )
+                f"Config collision detected in '{self.savedir}'."
+                f"\nDifference in configurations:\n{diff}"
+                "\n\nThis error occurs to prevent accidental overwriting of"
+                " existing models."
+                "\nTo resolve this, you can either:"
+                "\n  1. Overwrite the existing model:"
+                f" Delete '{self.savedir}/config.json'"
+                "\n  2. Preserve both models: Use a different directory by"
+                " changing 'label' or 'outdir' in your config"
             )
 
     @staticmethod
